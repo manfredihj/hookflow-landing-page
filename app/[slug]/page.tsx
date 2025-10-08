@@ -6,6 +6,24 @@ import { VSL } from "@/components/sections/VSL";
 import { Pricing } from "@/components/sections/Pricing";
 import { CallToAction } from "@/components/sections/CTA";
 import { Footer } from "@/components/sections/Footer";
+import type { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const data = await getLandingContent(slug);
+
+  if (!data) {
+    return {
+      title: "Página no encontrada - HookflowAI",
+      description: "La página que buscás no existe.",
+    };
+  }
+
+  return {
+    title: `${data.title} - HookflowAI`,
+    description: data.description,
+  };
+}
 
 export default async function LandingPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -21,18 +39,18 @@ export default async function LandingPage({ params }: { params: Promise<{ slug: 
   }
 
   return (
-    <main className="min-h-screen bg-white text-neutral-dark">
-      <Hero title={data.title} description={data.description} cta={data.cta} />
+    <main className="min-h-screen">
+      <Hero title={data.title} description={data.description} cta={data.cta} calLink={data.calLink} />
       {data.videoUrl && <VSL videoUrl={data.videoUrl} title={data.videoTitle} />}
       <Features items={data.features} />
-      {data.pricingTiers && (
+      {data.showPricing !== false && data.pricingTiers && (
         <Pricing
           title={data.pricingTitle}
           subtitle={data.pricingSubtitle}
           tiers={data.pricingTiers}
         />
       )}
-      {data.ctaBlock && <CallToAction text={data.ctaBlock.text} cta={data.ctaBlock.cta} />}
+      {data.ctaBlock && <CallToAction text={data.ctaBlock.text} cta={data.ctaBlock.cta} calLink={data.calLink} />}
       <Footer />
     </main>
   );

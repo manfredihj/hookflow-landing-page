@@ -12,10 +12,12 @@ export type Landing = {
   title: string;
   description: string;
   cta: string;
+  calLink?: string;
   features: { title: string; text: string }[];
   ctaBlock?: { text: string; cta: string };
   videoUrl?: string;
   videoTitle?: string;
+  showPricing?: boolean;
   pricingTitle?: string;
   pricingSubtitle?: string;
   pricingTiers?: PricingTier[];
@@ -25,7 +27,8 @@ export const LANDINGS: Record<string, Landing> = {
   ecommerce: {
     title: "Duplicá tus ventas recuperando carritos por WhatsApp 🛒",
     description: "HookflowAI recupera el doble de carritos abandonados que tus campañas de email. Integración rápida y resultados medibles.",
-    cta: "Probar 14 días gratis",
+    cta: "Agendar reunión",
+    calLink: "https://cal.com/julian-manfredi/agentes-ia-reunion-descubrimiento",
     features: [
       { title: "Integración automática", text: "Conectá tu Tiendanube, Shopify o WooCommerce en minutos." },
       { title: "IA de seguimiento", text: "Tu agente conversa con los clientes para cerrar la venta 24/7." },
@@ -81,7 +84,8 @@ export const LANDINGS: Record<string, Landing> = {
   inmobiliarias: {
     title: "Tu agente inmobiliario con IA califica leads 24/7 🏠",
     description: "Olvidate de responder manualmente. La IA pregunta, filtra y deriva solo leads listos para cerrar.",
-    cta: "Ver demo inmobiliaria",
+    cta: "Agendar reunión",
+    calLink: "https://cal.com/julian-manfredi/agentes-ia-reunion-descubrimiento",
     features: [
       { title: "Filtro inteligente", text: "Compra / alquiler, presupuesto, zona y tipo de propiedad." },
       { title: "Calificación automática", text: "Llega a tu CRM con toda la información relevante." },
@@ -137,7 +141,8 @@ export const LANDINGS: Record<string, Landing> = {
   agencias: {
     title: "Ofrecé automatizaciones IA a tus clientes 🚀",
     description: "Agregá un servicio rentable sin sumar estructura: agentes de IA que califican leads y atienden consultas.",
-    cta: "Unirme al programa para agencias",
+    cta: "Agendar reunión",
+    calLink: "https://cal.com/julian-manfredi/agentes-ia-reunion-descubrimiento",
     features: [
       { title: "Marca blanca", text: "Operá con tu logo, colores y dominio." },
       { title: "Capacitación incluida", text: "Onboarding y materiales para tu equipo." },

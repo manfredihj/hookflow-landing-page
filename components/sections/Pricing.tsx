@@ -18,14 +18,14 @@ interface PricingProps {
 
 export function Pricing({ title = "Planes y Precios", subtitle, tiers }: PricingProps) {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-dark mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             {title}
           </h2>
           {subtitle && (
-            <p className="text-lg text-neutral-gray max-w-2xl mx-auto">
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">
               {subtitle}
             </p>
           )}
@@ -35,29 +35,29 @@ export function Pricing({ title = "Planes y Precios", subtitle, tiers }: Pricing
           {tiers.map((tier, index) => (
             <Card
               key={index}
-              className={`p-8 ${
+              className={`p-8 bg-white/10 backdrop-blur-sm ${
                 tier.highlighted
-                  ? 'border-brand-primary border-2 shadow-xl scale-105'
-                  : 'border-gray-200'
+                  ? 'border-white/40 border-2 shadow-xl scale-105'
+                  : 'border-white/20'
               }`}
             >
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-neutral-dark mb-2">
+                <h3 className="text-2xl font-bold text-white mb-2">
                   {tier.name}
                 </h3>
-                <div className="text-4xl font-extrabold text-brand-primary mb-2">
+                <div className="text-4xl font-extrabold text-brand-green mb-2">
                   {tier.price}
                 </div>
-                <p className="text-neutral-gray text-sm">
+                <p className="text-white/70 text-sm">
                   {tier.description}
                 </p>
               </div>
 
               <ul className="space-y-3 mb-8">
                 {tier.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start text-neutral-dark">
+                  <li key={featureIndex} className="flex items-start text-white">
                     <svg
-                      className="w-5 h-5 text-brand-primary mr-2 mt-0.5 flex-shrink-0"
+                      className="w-5 h-5 text-brand-green mr-2 mt-0.5 flex-shrink-0"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -73,11 +73,9 @@ export function Pricing({ title = "Planes y Precios", subtitle, tiers }: Pricing
               </ul>
 
               <Button
-                className={`w-full ${
-                  tier.highlighted
-                    ? 'bg-brand-primary hover:bg-brand-primary/90'
-                    : 'bg-neutral-dark hover:bg-neutral-dark/90'
-                }`}
+                className="w-full"
+                trackEvent="InitiateCheckout"
+                trackData={{ tier: tier.name, price: tier.price }}
               >
                 {tier.cta}
               </Button>
