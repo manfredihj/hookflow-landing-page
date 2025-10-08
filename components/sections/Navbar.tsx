@@ -34,6 +34,12 @@ export function Navbar() {
           >
             Agencias
           </Link>
+          {/* <Link
+            href="/blog"
+            className="text-white/80 hover:text-white text-sm transition hidden md:block"
+          >
+            Blog
+          </Link> */}
         </div>
       </div>
     </nav>

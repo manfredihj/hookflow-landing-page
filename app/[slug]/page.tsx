@@ -15,14 +15,39 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!data) {
     return {
-      title: "Página no encontrada - HookflowAI",
+      title: "Página no encontrada",
       description: "La página que buscás no existe.",
     };
   }
 
+  const cleanTitle = data.title.replace(/[🛒🏠🚀]/g, '').trim();
+
   return {
-    title: `${data.title} - HookflowAI`,
+    title: cleanTitle,
     description: data.description,
+    openGraph: {
+      title: data.title,
+      description: data.description,
+      type: "website",
+      url: `https://hookflow-landing-page.vercel.app/${slug}`,
+      images: [
+        {
+          url: "/logo-white.png",
+          width: 1200,
+          height: 630,
+          alt: cleanTitle,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: data.title,
+      description: data.description,
+      images: ["/logo-white.png"],
+    },
+    alternates: {
+      canonical: `https://hookflow-landing-page.vercel.app/${slug}`,
+    },
   };
 }
 
