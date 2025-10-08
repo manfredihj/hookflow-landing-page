@@ -1,9 +1,9 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, Suspense } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 
-export function FacebookPixel() {
+function FacebookPixelInner() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -44,6 +44,14 @@ export function FacebookPixel() {
   }, [pathname, searchParams]);
 
   return null;
+}
+
+export function FacebookPixel() {
+  return (
+    <Suspense fallback={null}>
+      <FacebookPixelInner />
+    </Suspense>
+  );
 }
 
 // Helper function para trackear eventos personalizados

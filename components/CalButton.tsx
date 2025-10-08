@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Button } from './ui/button';
 
@@ -14,7 +14,7 @@ interface CalButtonProps {
   trackData?: Record<string, any>;
 }
 
-export function CalButton({
+function CalButtonInner({
   calLink,
   children,
   size = "lg",
@@ -65,5 +65,21 @@ export function CalButton({
     >
       {children}
     </Button>
+  );
+}
+
+export function CalButton(props: CalButtonProps) {
+  return (
+    <Suspense fallback={
+      <Button
+        size={props.size}
+        variant={props.variant}
+        className={props.className}
+      >
+        {props.children}
+      </Button>
+    }>
+      <CalButtonInner {...props} />
+    </Suspense>
   );
 }
