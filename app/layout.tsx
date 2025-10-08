@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { FacebookPixel } from "@/components/FacebookPixel";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: "HookflowAI — Agentes de IA para crecer",
@@ -16,6 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <FacebookPixel />
         {children}
+        <WhatsAppButton />
         <SpeedInsights />
       </body>
     </html>
