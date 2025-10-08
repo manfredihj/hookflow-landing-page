@@ -6,6 +6,7 @@ import { VSL } from "@/components/sections/VSL";
 import { Pricing } from "@/components/sections/Pricing";
 import { CallToAction } from "@/components/sections/CTA";
 import { Footer } from "@/components/sections/Footer";
+import { FacebookViewContent } from "@/components/FacebookViewContent";
 import type { Metadata } from "next";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -40,6 +41,14 @@ export default async function LandingPage({ params }: { params: Promise<{ slug: 
 
   return (
     <main className="min-h-screen">
+      <FacebookViewContent
+        content_name={data.fbEventParams?.content_name}
+        content_ids={data.fbEventParams?.content_ids}
+        content_type={data.fbEventParams?.content_type}
+        value={data.fbEventParams?.value}
+        currency={data.fbEventParams?.currency}
+        niche={data.niche}
+      />
       <Hero title={data.title} description={data.description} cta={data.cta} calLink={data.calLink} />
       {data.videoUrl && <VSL videoUrl={data.videoUrl} title={data.videoTitle} />}
       <Features items={data.features} />

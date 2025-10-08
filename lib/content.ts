@@ -21,6 +21,14 @@ export type Landing = {
   pricingTitle?: string;
   pricingSubtitle?: string;
   pricingTiers?: PricingTier[];
+  niche?: string;
+  fbEventParams?: {
+    content_name?: string;
+    content_ids?: string[];
+    content_type?: string;
+    value?: number;
+    currency?: string;
+  };
 };
 
 export const LANDINGS: Record<string, Landing> = {
@@ -29,6 +37,13 @@ export const LANDINGS: Record<string, Landing> = {
     description: "HookflowAI recupera el doble de carritos abandonados que tus campañas de email. Integración rápida y resultados medibles.",
     cta: "Agendar reunión",
     calLink: "https://cal.com/julian-manfredi/agentes-ia-reunion-descubrimiento",
+    niche: "ecommerce",
+    fbEventParams: {
+      content_name: "Landing E-commerce",
+      content_ids: ["ecommerce-landing"],
+      content_type: "product",
+      currency: "USD",
+    },
     features: [
       { title: "Integración automática", text: "Conectá tu Tiendanube, Shopify o WooCommerce en minutos." },
       { title: "IA de seguimiento", text: "Tu agente conversa con los clientes para cerrar la venta 24/7." },
@@ -86,6 +101,13 @@ export const LANDINGS: Record<string, Landing> = {
     description: "Olvidate de responder manualmente. La IA pregunta, filtra y deriva solo leads listos para cerrar.",
     cta: "Agendar reunión",
     calLink: "https://cal.com/julian-manfredi/agentes-ia-reunion-descubrimiento",
+    niche: "real_estate",
+    fbEventParams: {
+      content_name: "Landing Inmobiliarias",
+      content_ids: ["inmobiliarias-landing"],
+      content_type: "product",
+      currency: "USD",
+    },
     features: [
       { title: "Filtro inteligente", text: "Compra / alquiler, presupuesto, zona y tipo de propiedad." },
       { title: "Calificación automática", text: "Llega a tu CRM con toda la información relevante." },
@@ -143,6 +165,13 @@ export const LANDINGS: Record<string, Landing> = {
     description: "Agregá un servicio rentable sin sumar estructura: agentes de IA que califican leads y atienden consultas.",
     cta: "Agendar reunión",
     calLink: "https://cal.com/julian-manfredi/agentes-ia-reunion-descubrimiento",
+    niche: "agencies",
+    fbEventParams: {
+      content_name: "Landing Agencias",
+      content_ids: ["agencias-landing"],
+      content_type: "product",
+      currency: "USD",
+    },
     features: [
       { title: "Marca blanca", text: "Operá con tu logo, colores y dominio." },
       { title: "Capacitación incluida", text: "Onboarding y materiales para tu equipo." },
