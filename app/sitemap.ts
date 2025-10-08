@@ -3,7 +3,7 @@ import { LANDINGS } from '@/lib/content'
 import { getAllPosts } from '@/lib/blog'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://hookflow-landing-page.vercel.app'
+  const baseUrl = 'https://hookflowai.com'
 
   // Homepage
   const routes = [
