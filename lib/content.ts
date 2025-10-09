@@ -310,6 +310,75 @@ export const LANDINGS: Record<string, Landing> = {
         cta: "Agendar reunión"
       }
     ]
+  },
+  gastronomia: {
+    title: "Automatizá la atención de tu restaurante por WhatsApp 🍽️",
+    description: "Tu agente de IA responde consultas, toma pedidos y gestiona reservas 24/7. Atención personalizada sin contratar más personal.",
+    cta: "Agendar reunión",
+    calLink: "https://cal.com/julian-manfredi/agentes-ia-reunion-descubrimiento",
+    niche: "gastronomy",
+    fbEventParams: {
+      content_name: "Landing Gastronomía",
+      content_ids: ["gastronomia-landing"],
+      content_type: "product",
+      currency: "USD",
+    },
+    features: [
+      { title: "Atención 24/7", text: "Tu agente de IA responde consultas sobre el menú, horarios, ubicación y disponibilidad en cualquier momento." },
+      { title: "Toma de pedidos", text: "Recibe pedidos de delivery o takeaway directamente por WhatsApp sin perder ningún cliente." },
+      { title: "Gestión de reservas", text: "Agenda mesas, confirma asistencias y envía recordatorios automáticos a tus clientes." }
+    ],
+    ctaBlock: { text: "¿Listo para automatizar la atención de tu local?", cta: "Empezar ahora" },
+    videoUrl: "https://www.youtube.com/watch?v=3xGyVZOJb0k",
+    videoTitle: "Mirá cómo funciona HookflowAI para gastronomía",
+    showPricing: true,
+    pricingTitle: "Planes para locales gastronómicos",
+    pricingSubtitle: "Elegí el plan perfecto según el volumen de tu negocio. Sin permanencia, cancelá cuando quieras.",
+    pricingTiers: [
+      {
+        name: "STARTER",
+        price: "USD 69/mes",
+        description: "Foodtrucks, bares chicos o pizzerías con bajo volumen",
+        features: [
+          "300 conversaciones IA / mes",
+          "1 usuario",
+          "1 conexión de WhatsApp",
+          "Costo adicional: USD 0.35 por conversación extra",
+          "Soporte por email"
+        ],
+        cta: "Empezar prueba gratis"
+      },
+      {
+        name: "GROW",
+        price: "USD 129/mes",
+        description: "Restaurantes con pedidos diarios o reservas por WhatsApp",
+        features: [
+          "1,000 conversaciones IA / mes",
+          "3 usuarios",
+          "1 conexión de WhatsApp",
+          "Costo adicional: USD 0.25 por conversación extra",
+          "Soporte prioritario",
+          "Panel de métricas avanzado"
+        ],
+        cta: "Empezar prueba gratis",
+        highlighted: true
+      },
+      {
+        name: "PRO",
+        price: "USD 249/mes",
+        description: "Franquicias o cadenas con atención 24/7 y varios locales",
+        features: [
+          "3,000 conversaciones IA / mes",
+          "5 usuarios",
+          "2 conexiones de WhatsApp",
+          "Costo adicional: USD 0.20 por conversación extra",
+          "Soporte dedicado 24/7",
+          "Integraciones personalizadas",
+          "Reportes detallados"
+        ],
+        cta: "Contactar ventas"
+      }
+    ]
   }
 };
 
