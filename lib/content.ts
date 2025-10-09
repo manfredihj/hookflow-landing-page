@@ -326,7 +326,6 @@ export const LANDINGS: Record<string, Landing> = {
     features: [
       { title: "Atención 24/7", text: "Tu agente de IA responde consultas sobre el menú, horarios, ubicación y disponibilidad en cualquier momento." },
       { title: "Toma de pedidos", text: "Recibe pedidos de delivery o takeaway directamente por WhatsApp sin perder ningún cliente." },
-      { title: "Gestión de reservas", text: "Agenda mesas, confirma asistencias y envía recordatorios automáticos a tus clientes." }
     ],
     ctaBlock: { text: "¿Listo para automatizar la atención de tu local?", cta: "Empezar ahora" },
     videoUrl: "https://www.youtube.com/watch?v=3xGyVZOJb0k",
