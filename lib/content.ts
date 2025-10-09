@@ -313,7 +313,7 @@ export const LANDINGS: Record<string, Landing> = {
   },
   gastronomia: {
     title: "Automatizá la atención de tu restaurante por WhatsApp 🍽️",
-    description: "Tu agente de IA responde consultas, toma pedidos y gestiona reservas 24/7. Atención personalizada sin contratar más personal.",
+    description: "Tu agente de IA responde consultas y toma pedidos 24/7. Atención personalizada sin contratar más personal.",
     cta: "Agendar reunión",
     calLink: "https://cal.com/julian-manfredi/agentes-ia-reunion-descubrimiento",
     niche: "gastronomy",
@@ -350,7 +350,7 @@ export const LANDINGS: Record<string, Landing> = {
       {
         name: "GROW",
         price: "USD 129/mes",
-        description: "Restaurantes con pedidos diarios o reservas por WhatsApp",
+        description: "Restaurantes con pedidos diarios por WhatsApp",
         features: [
           "1,000 conversaciones IA / mes",
           "3 usuarios",
