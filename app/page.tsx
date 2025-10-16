@@ -127,10 +127,27 @@ export default function Home() {
             Soluciones para tu negocio
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Ventas / CRM */}
+            <a
+              href="/soluciones-ai-para-ventas"
+              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-brand-green/50 transition-all"
+            >
+              <div className="text-4xl mb-4">💬</div>
+              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-brand-green transition-colors">
+                Ventas / CRM
+              </h3>
+              <p className="text-white/70 mb-4">
+                CRM conversacional con IA. Atiende por WhatsApp e Instagram, califica leads y cierra ventas 24/7.
+              </p>
+              <div className="text-brand-green font-semibold group-hover:underline">
+                Ver solución →
+              </div>
+            </a>
+
             {/* E-commerce */}
             <a
-              href="/ecommerce"
+              href="/soluciones-ai-para-ecommerce"
               className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-brand-green/50 transition-all"
             >
               <div className="text-4xl mb-4">🛒</div>
@@ -147,7 +164,7 @@ export default function Home() {
 
             {/* Inmobiliarias */}
             <a
-              href="/inmobiliarias"
+              href="/soluciones-ai-para-inmobiliarias"
               className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-brand-green/50 transition-all"
             >
               <div className="text-4xl mb-4">🏠</div>
@@ -164,7 +181,7 @@ export default function Home() {
 
             {/* Agencias */}
             <a
-              href="/agencias"
+              href="/partner-ai-agentes"
               className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-brand-green/50 transition-all"
             >
               <div className="text-4xl mb-4">🚀</div>

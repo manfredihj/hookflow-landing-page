@@ -10,20 +10,42 @@ interface VSLProps {
 export function VSL({ videoUrl, title }: VSLProps) {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Extraer el ID del video de YouTube
-  const getYouTubeId = (url: string) => {
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
-    const match = url.match(regExp);
-    return match && match[2].length === 11 ? match[2] : null;
+  // Detectar el tipo de video
+  const getVideoInfo = (url: string) => {
+    // YouTube
+    const youtubeRegExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const youtubeMatch = url.match(youtubeRegExp);
+    if (youtubeMatch && youtubeMatch[2].length === 11) {
+      return {
+        type: 'youtube' as const,
+        id: youtubeMatch[2],
+        embedUrl: `https://www.youtube.com/embed/${youtubeMatch[2]}?autoplay=1&rel=0&modestbranding=1`,
+        thumbnailUrl: `https://i.ytimg.com/vi/${youtubeMatch[2]}/maxresdefault.jpg`,
+        useFacade: true
+      };
+    }
+
+    // Loom
+    const loomRegExp = /loom\.com\/share\/([a-zA-Z0-9]+)/;
+    const loomMatch = url.match(loomRegExp);
+    if (loomMatch && loomMatch[1]) {
+      return {
+        type: 'loom' as const,
+        id: loomMatch[1],
+        embedUrl: `https://www.loom.com/embed/${loomMatch[1]}`,
+        thumbnailUrl: '',
+        useFacade: false // Loom carga directo sin facade por restricciones CORS
+      };
+    }
+
+    return null;
   };
 
-  const videoId = getYouTubeId(videoUrl);
+  const videoInfo = getVideoInfo(videoUrl);
 
-  if (!videoId) {
+  if (!videoInfo) {
     return null;
   }
-
-  const thumbnailUrl = `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`;
 
   return (
     <section className="py-16">
@@ -34,15 +56,15 @@ export function VSL({ videoUrl, title }: VSLProps) {
           </h2>
         )}
         <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-          {!isLoaded ? (
-            // Facade: thumbnail + play button
+          {!isLoaded && videoInfo.useFacade ? (
+            // Facade: thumbnail + play button (solo para YouTube)
             <button
               onClick={() => setIsLoaded(true)}
               className="absolute top-0 left-0 w-full h-full rounded-lg shadow-2xl overflow-hidden group cursor-pointer"
               aria-label="Reproducir video"
             >
               <img
-                src={thumbnailUrl}
+                src={videoInfo.thumbnailUrl}
                 alt="Video thumbnail"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -60,10 +82,10 @@ export function VSL({ videoUrl, title }: VSLProps) {
               </div>
             </button>
           ) : (
-            // Iframe real con parámetros optimizados
+            // Iframe real (Loom carga directo, YouTube después del click)
             <iframe
               className="absolute top-0 left-0 w-full h-full rounded-lg shadow-2xl"
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`}
+              src={videoInfo.embedUrl}
               title="Video Sales Letter"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

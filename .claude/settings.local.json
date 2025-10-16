@@ -4,7 +4,8 @@
       "Bash(npm install:*)",
       "Bash(npm run dev:*)",
       "Bash(npm run build:*)",
-      "Bash(dir /B appblog)"
+      "Bash(dir /B appblog)",
+      "Bash(del \"c:\\workspace-node\\hookflow-landing-page\\components\\sections\\SimplePricing.tsx\")"
     ],
     "deny": [],
     "ask": []

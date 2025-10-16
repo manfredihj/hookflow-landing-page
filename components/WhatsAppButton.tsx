@@ -7,9 +7,10 @@ export function WhatsAppButton() {
 
   const getPageName = () => {
     if (pathname === '/') return 'Home';
-    if (pathname === '/ecommerce') return 'E-commerce';
-    if (pathname === '/inmobiliarias') return 'Inmobiliarias';
-    if (pathname === '/agencias') return 'Agencias';
+    if (pathname.includes('ecommerce')) return 'E-commerce';
+    if (pathname.includes('inmobiliaria')) return 'Inmobiliarias';
+    if (pathname.includes('partner')) return 'Partner';
+    if (pathname.includes('restaurante')) return 'Restaurantes';
     return 'la web';
   };
 

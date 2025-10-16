@@ -17,13 +17,13 @@ export function Navbar() {
 
         <div className="flex items-center gap-4">
           <Link
-            href="/ecommerce"
+            href="/soluciones-ai-para-ecommerce"
             className="text-white/80 hover:text-white text-sm transition hidden md:block"
           >
             E-commerce
           </Link>
           <Link
-            href="/inmobiliarias"
+            href="/soluciones-ai-para-inmobiliarias"
             className="text-white/80 hover:text-white text-sm transition hidden md:block"
           >
             Inmobiliarias

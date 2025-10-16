@@ -77,11 +77,12 @@ export default async function LandingPage({ params }: { params: Promise<{ slug: 
       <Hero title={data.title} description={data.description} cta={data.cta} calLink={data.calLink} />
       {data.videoUrl && <VSL videoUrl={data.videoUrl} title={data.videoTitle} />}
       <Features items={data.features} />
-      {data.showPricing !== false && data.pricingTiers && (
+      {data.pricingTiers && (
         <Pricing
           title={data.pricingTitle}
           subtitle={data.pricingSubtitle}
           tiers={data.pricingTiers}
+          showPrice={data.showPricing !== false}
         />
       )}
       {data.ctaBlock && <CallToAction text={data.ctaBlock.text} cta={data.ctaBlock.cta} calLink={data.calLink} />}

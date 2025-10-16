@@ -32,7 +32,7 @@ export type Landing = {
 };
 
 export const LANDINGS: Record<string, Landing> = {
-  ecommerce: {
+  "soluciones-ai-para-ecommerce": {
     title: "Duplicá tus ventas recuperando carritos por WhatsApp 🛒",
     description: "HookflowAI recupera el doble de carritos abandonados que tus campañas de email. Integración rápida y resultados medibles.",
     cta: "Agendar reunión",
@@ -50,10 +50,11 @@ export const LANDINGS: Record<string, Landing> = {
       { title: "Panel de resultados", text: "Mirá tus métricas de recuperación en tiempo real." }
     ],
     ctaBlock: { text: "¿Listo para recuperar el doble de carritos?", cta: "Empezar ahora" },
-    videoUrl: "https://www.youtube.com/watch?v=3xGyVZOJb0k",
+    videoUrl: "https://www.loom.com/share/98ba5c9ca845499d85eb8f33b57d2c5e",
     videoTitle: "Descubrí cómo funciona HookflowAI",
     pricingTitle: "Planes que escalan con tu negocio",
     pricingSubtitle: "Elegí el plan perfecto para tu e-commerce. Sin permanencia, cancelá cuando quieras.",
+    showPricing: false,
     pricingTiers: [
       {
         name: "Starter",
@@ -96,7 +97,7 @@ export const LANDINGS: Record<string, Landing> = {
       }
     ]
   },
-  inmobiliarias: {
+  "soluciones-ai-para-inmobiliarias": {
     title: "Tu agente inmobiliario con IA califica leads 24/7 🏠",
     description: "Olvidate de responder manualmente. La IA pregunta, filtra y deriva solo leads listos para cerrar.",
     cta: "Agendar reunión",
@@ -114,10 +115,11 @@ export const LANDINGS: Record<string, Landing> = {
       { title: "Atención inmediata", text: "Respuestas en segundos por WhatsApp, todo el día." }
     ],
     ctaBlock: { text: "Probá la demo guiada para inmobiliarias", cta: "Quiero la demo" },
-    videoUrl: "https://www.youtube.com/watch?v=3xGyVZOJb0k",
+    videoUrl: "https://www.loom.com/share/98ba5c9ca845499d85eb8f33b57d2c5e",
     videoTitle: "Mirá cómo un agente IA califica tus leads",
     pricingTitle: "Invertí en calidad de leads, no en tiempo",
     pricingSubtitle: "Planes diseñados para inmobiliarias que quieren escalar sin aumentar costos operativos.",
+    showPricing: false,
     pricingTiers: [
       {
         name: "Básico",
@@ -160,7 +162,7 @@ export const LANDINGS: Record<string, Landing> = {
       }
     ]
   },
-  agencias: {
+  "partner-ai-agentes": {
     title: "Ofrecé automatizaciones IA a tus clientes 🚀",
     description: "Agregá un servicio rentable sin sumar estructura: agentes de IA que califican leads y atienden consultas.",
     cta: "Agendar reunión",
@@ -178,10 +180,11 @@ export const LANDINGS: Record<string, Landing> = {
       { title: "Escalá tus ingresos", text: "Multiplicá servicios sin aumentar headcount." }
     ],
     ctaBlock: { text: "¿Querés lanzar tu oferta IA en 7 días?", cta: "Aplicar ahora" },
-    videoUrl: "https://www.youtube.com/watch?v=3xGyVZOJb0k",
+    videoUrl: "https://www.loom.com/share/98ba5c9ca845499d85eb8f33b57d2c5e",
     videoTitle: "Convertite en partner y vendé soluciones IA",
     pricingTitle: "Programa de Partners",
     pricingSubtitle: "Modelos flexibles para que agregues valor sin riesgo ni infraestructura.",
+    showPricing: false,
     pricingTiers: [
       {
         name: "Reseller",
@@ -224,7 +227,7 @@ export const LANDINGS: Record<string, Landing> = {
       }
     ]
   },
-  "ecommerce-carritos": {
+  "soluciones-ai-para-ecommerce-carritos": {
     title: "Recuperación de carritos abandonados por WhatsApp",
     description: "Recuperá hasta un 40% más de ventas automatizando el seguimiento por WhatsApp con una IA que será persuasiva y amigable para animar y guiar a cada cliente de forma personalizada.",
     cta: "Agendar reunión",
@@ -255,10 +258,11 @@ export const LANDINGS: Record<string, Landing> = {
       }
     ],
     ctaBlock: { text: "No dejes más ventas en el camino", cta: "Agendar reunión" },
-    videoUrl: "https://www.youtube.com/watch?v=3xGyVZOJb0k",
+    videoUrl: "https://www.loom.com/share/98ba5c9ca845499d85eb8f33b57d2c5e",
     videoTitle: "¿Cómo funciona? Automatizamos el seguimiento por WhatsApp en 3 pasos simples",
     pricingTitle: "Todo listo en tan solo 4 semanas",
     pricingSubtitle: "Descubre cómo transformamos tus procesos con agentes de IA adaptados a tu negocio en solo cuatro semanas",
+    showPricing: false,
     pricingTiers: [
       {
         name: "Semana 1: Diseño personalizado",
@@ -311,7 +315,7 @@ export const LANDINGS: Record<string, Landing> = {
       }
     ]
   },
-  gastronomia: {
+  "soluciones-ai-para-restaurantes": {
     title: "Automatizá la atención de tu restaurante por WhatsApp 🍽️",
     description: "Tu agente de IA responde consultas y toma pedidos 24/7. Atención personalizada sin contratar más personal.",
     cta: "Agendar reunión",
@@ -328,11 +332,11 @@ export const LANDINGS: Record<string, Landing> = {
       { title: "Toma de pedidos", text: "Recibe pedidos de delivery o takeaway directamente por WhatsApp sin perder ningún cliente." },
     ],
     ctaBlock: { text: "¿Listo para automatizar la atención de tu local?", cta: "Empezar ahora" },
-    videoUrl: "https://www.youtube.com/watch?v=3xGyVZOJb0k",
+    videoUrl: "https://www.loom.com/share/98ba5c9ca845499d85eb8f33b57d2c5e",
     videoTitle: "Mirá cómo funciona HookflowAI para gastronomía",
-    showPricing: true,
     pricingTitle: "Planes para locales gastronómicos",
     pricingSubtitle: "Elegí el plan perfecto según el volumen de tu negocio. Sin permanencia, cancelá cuando quieras.",
+    showPricing: false,
     pricingTiers: [
       {
         name: "STARTER",
@@ -374,6 +378,104 @@ export const LANDINGS: Record<string, Landing> = {
           "Soporte dedicado 24/7",
           "Integraciones personalizadas",
           "Reportes detallados"
+        ],
+        cta: "Contactar ventas"
+      }
+    ]
+  },
+  "soluciones-ai-para-ventas": {
+    title: "CRM Conversacional gestionado por Agentes de IA 💬",
+    description: "Automatizá tu equipo de ventas con IA que atiende consultas, califica leads y cierra ventas por WhatsApp e Instagram 24/7.",
+    cta: "Agendar reunión",
+    calLink: "https://cal.com/julian-manfredi/agentes-ia-reunion-descubrimiento",
+    niche: "sales",
+    fbEventParams: {
+      content_name: "Landing Ventas",
+      content_ids: ["ventas-landing"],
+      content_type: "product",
+      currency: "USD",
+    },
+    features: [
+      {
+        title: "Atención multicanal inteligente",
+        text: "Tu agente de IA responde consultas en WhatsApp e Instagram de forma simultánea. Gestiona todas las conversaciones desde un solo dashboard."
+      },
+      {
+        title: "Calificación automática de leads",
+        text: "La IA identifica leads calientes según sus respuestas, presupuesto e intención de compra. Deriva solo los clientes listos para cerrar a tu equipo comercial."
+      },
+      {
+        title: "Respuestas instantáneas 24/7",
+        text: "No pierdas más ventas por responder tarde. Tu agente contesta en segundos, cualquier día y a cualquier hora."
+      },
+      {
+        title: "Seguimiento automático",
+        text: "La IA hace follow-up de prospectos que no compraron, reactiva conversaciones frías y recupera oportunidades perdidas sin intervención manual."
+      },
+      {
+        title: "Integración con tu CRM",
+        text: "Sincroniza automáticamente cada conversación, lead y venta con tu CRM. Toda la información centralizada para tu equipo."
+      },
+      {
+        title: "Personalización por industria",
+        text: "Entrenamos al agente con el conocimiento específico de tu negocio, productos y servicios para conversaciones naturales y efectivas."
+      }
+    ],
+    ctaBlock: {
+      text: "¿Querés multiplicar tus ventas sin contratar más personal?",
+      cta: "Agendar demo personalizada"
+    },
+    videoUrl: "https://www.loom.com/share/98ba5c9ca845499d85eb8f33b57d2c5e",
+    videoTitle: "Mirá cómo funciona nuestro CRM Conversacional con IA",
+    pricingTitle: "Planes diseñados para equipos de ventas",
+    pricingSubtitle: "Elegí el plan perfecto para el tamaño de tu operación comercial. Sin permanencia, cancelá cuando quieras.",
+    showPricing: false,
+    pricingTiers: [
+      {
+        name: "STARTER",
+        price: "USD 149/mes",
+        description: "Ideal para emprendedores y pequeños equipos",
+        features: [
+          "500 conversaciones IA / mes",
+          "2 usuarios",
+          "1 canal (WhatsApp o Instagram)",
+          "Calificación básica de leads",
+          "Panel de métricas en tiempo real",
+          "Soporte por email"
+        ],
+        cta: "Empezar prueba gratis"
+      },
+      {
+        name: "BUSINESS",
+        price: "USD 349/mes",
+        description: "Para equipos de ventas en crecimiento",
+        features: [
+          "2,000 conversaciones IA / mes",
+          "5 usuarios",
+          "2 canales (WhatsApp + Instagram)",
+          "Calificación avanzada con scoring",
+          "Integración con CRM (HubSpot, Pipedrive, etc.)",
+          "Seguimiento automático de prospectos",
+          "Reportes detallados",
+          "Soporte prioritario"
+        ],
+        cta: "Empezar prueba gratis",
+        highlighted: true
+      },
+      {
+        name: "ENTERPRISE",
+        price: "Personalizado",
+        description: "Para operaciones comerciales de alto volumen",
+        features: [
+          "Conversaciones ilimitadas",
+          "Usuarios ilimitados",
+          "Múltiples canales (WhatsApp, Instagram, Facebook, Web)",
+          "IA personalizada para tu industria",
+          "Integraciones custom con tu stack",
+          "API completa",
+          "Marca blanca disponible",
+          "Account manager dedicado",
+          "Soporte 24/7"
         ],
         cta: "Contactar ventas"
       }

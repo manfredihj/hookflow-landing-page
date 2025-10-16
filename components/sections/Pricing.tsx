@@ -14,9 +14,10 @@ interface PricingProps {
   title?: string;
   subtitle?: string;
   tiers: PricingTier[];
+  showPrice?: boolean;
 }
 
-export function Pricing({ title = "Planes y Precios", subtitle, tiers }: PricingProps) {
+export function Pricing({ title = "Planes y Precios", subtitle, tiers, showPrice = true }: PricingProps) {
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
@@ -45,9 +46,11 @@ export function Pricing({ title = "Planes y Precios", subtitle, tiers }: Pricing
                 <h3 className="text-2xl font-bold text-white mb-2">
                   {tier.name}
                 </h3>
-                <div className="text-4xl font-extrabold text-brand-green mb-2">
-                  {tier.price}
-                </div>
+                {showPrice && (
+                  <div className="text-4xl font-extrabold text-brand-green mb-2">
+                    {tier.price}
+                  </div>
+                )}
                 <p className="text-white/70 text-sm">
                   {tier.description}
                 </p>
