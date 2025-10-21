@@ -128,12 +128,29 @@ export default function Home() {
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Atención al Cliente */}
+            <a
+              href="/soluciones-ia-para-atencion-al-cliente"
+              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-brand-green/50 transition-all"
+            >
+              <div className="text-4xl mb-4">💬</div>
+              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-brand-green transition-colors">
+                Atención al Cliente
+              </h3>
+              <p className="text-white/70 mb-4">
+                Atendé por WhatsApp e Instagram 24/7 sin estar conectado. IA que responde, agenda y organiza.
+              </p>
+              <div className="text-brand-green font-semibold group-hover:underline">
+                Ver solución →
+              </div>
+            </a>
+
             {/* Ventas / CRM */}
             <a
               href="/soluciones-ai-para-ventas"
               className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-brand-green/50 transition-all"
             >
-              <div className="text-4xl mb-4">💬</div>
+              <div className="text-4xl mb-4">📈</div>
               <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-brand-green transition-colors">
                 Ventas / CRM
               </h3>
@@ -173,6 +190,25 @@ export default function Home() {
               </h3>
               <p className="text-white/70 mb-4">
                 Califica leads automáticamente. Filtra por presupuesto, zona y tipo de propiedad.
+              </p>
+              <div className="text-brand-green font-semibold group-hover:underline">
+                Ver solución →
+              </div>
+            </a>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 mt-6 max-w-2xl mx-auto">
+            {/* Gastronomía */}
+            <a
+              href="/soluciones-ai-para-restaurantes"
+              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-brand-green/50 transition-all"
+            >
+              <div className="text-4xl mb-4">🍽️</div>
+              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-brand-green transition-colors">
+                Gastronomía
+              </h3>
+              <p className="text-white/70 mb-4">
+                Automatizá pedidos y consultas de tu restaurante por WhatsApp 24/7.
               </p>
               <div className="text-brand-green font-semibold group-hover:underline">
                 Ver solución →

@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { CalButton } from "@/components/CalButton";
 import { Card } from "@/components/ui/card";
 
 interface PricingTier {
@@ -15,9 +15,10 @@ interface PricingProps {
   subtitle?: string;
   tiers: PricingTier[];
   showPrice?: boolean;
+  calLink?: string;
 }
 
-export function Pricing({ title = "Planes y Precios", subtitle, tiers, showPrice = true }: PricingProps) {
+export function Pricing({ title = "Planes y Precios", subtitle, tiers, showPrice = true, calLink = "https://cal.com/julian-manfredi/agentes-ia-reunion-descubrimiento" }: PricingProps) {
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
@@ -75,13 +76,16 @@ export function Pricing({ title = "Planes y Precios", subtitle, tiers, showPrice
                 ))}
               </ul>
 
-              <Button
+              <CalButton
+                calLink={calLink}
                 className="w-full"
+                size="md"
+                variant="primary"
                 trackEvent="InitiateCheckout"
                 trackData={{ tier: tier.name, price: tier.price }}
               >
                 {tier.cta}
-              </Button>
+              </CalButton>
             </Card>
           ))}
         </div>

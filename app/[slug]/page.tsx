@@ -83,6 +83,7 @@ export default async function LandingPage({ params }: { params: Promise<{ slug: 
           subtitle={data.pricingSubtitle}
           tiers={data.pricingTiers}
           showPrice={data.showPricing !== false}
+          calLink={data.calLink}
         />
       )}
       {data.ctaBlock && <CallToAction text={data.ctaBlock.text} cta={data.ctaBlock.cta} calLink={data.calLink} />}
