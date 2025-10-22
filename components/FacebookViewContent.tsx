@@ -30,7 +30,10 @@ export function FacebookViewContent({
         if (content_type) params.content_type = content_type;
         if (value) params.value = value;
         if (currency) params.currency = currency;
-        if (niche) params.niche = niche;
+        if (niche) {
+          params.niche = niche;
+          params.content_category = niche;
+        }
 
         // Track ViewContent con parámetros
         (window as any).fbq('track', 'ViewContent', params);
