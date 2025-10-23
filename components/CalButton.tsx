@@ -20,7 +20,7 @@ function CalButtonInner({
   size = "lg",
   variant = "primary",
   className,
-  trackEvent = "Lead",
+  trackEvent = "Schedule",
   trackData
 }: CalButtonProps) {
   const searchParams = useSearchParams();
