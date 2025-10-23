@@ -482,7 +482,7 @@ export const LANDINGS: Record<string, Landing> = {
     ]
   },
   "soluciones-ia-para-atencion-al-cliente": {
-    title: "Atendé a todos tus clientes por WhatsApp sin estar conectado todo el día",
+    title: "Atendé a todos tus clientes por WhatsApp e Instagram con Inteligencia Artificial",
     description: "HookflowAI responde, agenda y organiza tus conversaciones por WhatsApp e Instagram, 24/7. La inteligencia artificial ya reemplaza la atención al cliente manual.",
     cta: "Agenda Demo Gratuita",
     calLink: "https://cal.com/julian-manfredi/agentes-ia-reunion-descubrimiento",
@@ -490,6 +490,93 @@ export const LANDINGS: Record<string, Landing> = {
     fbEventParams: {
       content_name: "Landing Atención al Cliente",
       content_ids: ["atencion-cliente-landing"],
+      content_type: "product",
+      currency: "USD",
+    },
+    features: [
+      {
+        title: "¿Te llegan mensajes todo el día y no llegás a responder?",
+        text: "📱 '¿Precio?' '¿Horario?' '¿Atienden por PAMI?' '¿Dónde están?' - Tardás horas en responder y cuando lo hacés… ya te dejaron de escribir. Tu equipo pierde tiempo en preguntas repetidas. Cada minuto sin responder, es una venta perdida. Lo que más valoran tus clientes no es el precio: es la respuesta inmediata."
+      },
+      {
+        title: "Tu agente de IA 24/7",
+        text: "Tu negocio no duerme. Tu agente de IA tampoco. HookflowAI atiende por WhatsApp e Instagram, responde consultas, agenda turnos y califica leads al instante. Todo desde una bandeja unificada para vos y tu equipo."
+      },
+      {
+        title: "Responde automáticamente las preguntas frecuentes",
+        text: "Tu agente de IA está entrenado con la información de tu negocio y responde instantáneamente las consultas más comunes sin que tengas que hacer nada."
+      },
+      {
+        title: "Agenda citas o envía links de pago",
+        text: "Coordiná turnos, reservas y envía enlaces de pago directamente desde WhatsApp. Todo automatizado, sin intervención manual."
+      },
+      {
+        title: "Califica consultas (urgente, rutina, venta)",
+        text: "La IA identifica y etiqueta automáticamente cada conversación según su prioridad, para que tu equipo se enfoque en lo importante."
+      },
+      {
+        title: "WhatsApp + Instagram + Web. Todo en un solo lugar",
+        text: "Olvidate de abrir 3 celulares distintos. Con HookflowAI, toda la atención al cliente se centraliza en una sola bandeja inteligente con chat unificado, etiquetas automáticas, historial del cliente y derivaciones internas."
+      }
+    ],
+    ctaBlock: {
+      text: "¿Listo para atender 24/7 sin estar conectado?",
+      cta: "Agendar demo gratuita"
+    },
+    videoUrl: "https://www.loom.com/share/98ba5c9ca845499d85eb8f33b57d2c5e",
+    videoTitle: "Mirá Cómo funciona ",
+    pricingTitle: "Cómo funciona - Tres pasos simples",
+    pricingSubtitle: "En menos de 48 horas tenés tu agente de IA respondiendo por vos",
+    showPricing: false,
+    pricingTiers: [
+      {
+        name: "1️⃣ Te mostramos cómo responde tu agente",
+        price: "",
+        description: "Demo guiada de 15 minutos",
+        features: [
+          "Vemos juntos cómo la IA responde consultas reales",
+          "Analizamos el tipo de mensajes que recibís",
+          "Definimos qué querés automatizar",
+          "Sin compromiso, 100% gratuito"
+        ],
+        cta: "Agendar demo"
+      },
+      {
+        name: "2️⃣ Entrenamos al agente con info de tu negocio",
+        price: "",
+        description: "En 48 hs está listo",
+        features: [
+          "Cargamos la información de tu negocio",
+          "Configuramos respuestas personalizadas",
+          "Integramos con WhatsApp e Instagram",
+          "Probamos todo antes de activar"
+        ],
+        cta: "Agendar demo",
+        highlighted: true
+      },
+      {
+        name: "3️⃣ Respondés 24/7, sin estar conectado",
+        price: "",
+        description: "Tu equipo se enfoca en lo importante",
+        features: [
+          "Atención automática las 24 horas",
+          "Notificaciones solo de lo urgente",
+          "Panel para ver todas las conversaciones",
+          "Soporte continuo y ajustes cuando lo necesites"
+        ],
+        cta: "Agendar demo"
+      }
+    ]
+  },
+  "soluciones-ai-para-atencion-al-cliente": {
+    title: "Atendé a todos tus clientes por WhatsApp e Instagram con Inteligencia Artificial",
+    description: "HookflowAI responde, agenda y organiza tus conversaciones por WhatsApp e Instagram, 24/7. La inteligencia artificial ya reemplaza la atención al cliente manual.",
+    cta: "Agenda Demo Gratuita",
+    calLink: "https://cal.com/julian-manfredi/agentes-ia-reunion-descubrimiento",
+    niche: "customer_service",
+    fbEventParams: {
+      content_name: "Landing Atención al Cliente AI",
+      content_ids: ["atencion-cliente-ai-landing"],
       content_type: "product",
       currency: "USD",
     },

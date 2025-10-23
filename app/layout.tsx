@@ -2,6 +2,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { FacebookPixel } from "@/components/FacebookPixel";
+import { GoogleTagManager } from "@/components/GoogleTagManager";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
@@ -56,6 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es">
       <body>
+        <GoogleTagManager />
         <FacebookPixel />
         {children}
         <WhatsAppButton />
