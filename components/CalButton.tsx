@@ -28,6 +28,16 @@ function CalButtonInner({
 
   useEffect(() => {
     const fbclid = searchParams.get('fbclid');
+    const url = new URL(calLink);
+
+    // Capturar y preservar parámetros UTM
+    const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+    utmParams.forEach(param => {
+      const value = searchParams.get(param);
+      if (value) {
+        url.searchParams.set(param, value);
+      }
+    });
 
     if (fbclid) {
       // Construir fbc igual que en WordPress
@@ -42,11 +52,10 @@ function CalButtonInner({
       const dataUuid = `|fbc=${fbc}|client_user_agent=${clientUserAgent}|event_source_url=${eventSourceUrl}|event_time=${requestTime}|`;
 
       // Agregar data_uuid a la URL de Cal.com
-      const url = new URL(calLink);
       url.searchParams.set('data_uuid', dataUuid);
-
-      setCalUrl(url.toString());
     }
+
+    setCalUrl(url.toString());
   }, [searchParams, calLink]);
 
   const handleClick = () => {
